@@ -1,2 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Sports Meter' /}
+
+<h1>Sports Meter</h1>
+#{list items: sports, as 'sport'}
+  <li>${sport}</li>
+#{/list}
