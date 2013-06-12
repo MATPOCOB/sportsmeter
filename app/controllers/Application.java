@@ -14,4 +14,8 @@ public class Application extends Controller {
     render(sports);
   }
 
+  public static void welcome() {
+    render();
+  }
+
 }
