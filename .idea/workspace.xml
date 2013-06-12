@@ -9,9 +9,9 @@
     <ignored path="sportsmeter.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1370985182991" ignored="false" />
-    <file path="/Dummy.txt" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1371019781039" ignored="false" />
+    <file path="/Dummy.txt" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1371020163806" ignored="false" />
     <file path="/a.java" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1370980890983" ignored="false" />
-    <file path="/Application.java" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1371019695275" ignored="false" />
+    <file path="/Application.java" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1371023599842" ignored="false" />
     <file path="/application.conf" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1370981304033" ignored="false" />
     <file path="/a.dummy" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1370989038999" ignored="false" />
     <file path="/index.html" changelist="4ff80a62-9713-4150-9339-fe0710727363" time="1371020131034" ignored="false" />
@@ -77,8 +77,10 @@
       <file leaf-file-name="Application.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="7" selection-start="288" selection-end="288" vertical-scroll-proportion="0.7054455">
-              <folding />
+            <state line="21" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="0.7029703">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +115,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="37" selection-start="112" selection-end="112" vertical-scroll-proportion="-2.5">
+            <state line="5" column="18" selection-start="119" selection-end="119" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -170,8 +172,8 @@
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/test/ApplicationTest.java" />
         <option value="$PROJECT_DIR$/system.properties" />
-        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/app/views/Application/index.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
       </list>
     </option>
   </component>
@@ -529,7 +531,11 @@
       <created>1371019788709</created>
       <updated>1371019788709</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lamdas removed, not compatible with play 1.2.5">
+      <created>1371020171446</created>
+      <updated>1371020171446</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,15 +733,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="112" selection-end="112" vertical-scroll-proportion="-2.5">
+        <state line="5" column="18" selection-start="119" selection-end="119" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="7" selection-start="288" selection-end="288" vertical-scroll-proportion="0.7054455">
-          <folding />
+        <state line="21" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="0.7029703">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
