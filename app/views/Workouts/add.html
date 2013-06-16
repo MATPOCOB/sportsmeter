@@ -1,0 +1,22 @@
+#{extends 'main.html' /}
+#{set title:'Add Workout' /}
+
+<h1>Add Workout</h1>
+<form action="@{Workouts.save}" method="post">
+  <label>
+    Date: <input name="workout.date" value="${flash['workout.date']}" placeholder="dd.mm.yyyy">
+    <span class="error">#{error 'workout.date' /}</span>
+  </label>
+  <br>
+  <label>
+    Type: <input name="workout.type" value="${flash['workout.type']}">
+    <span class="error">#{error 'workout.type' /}</span>
+  </label>
+  <br>
+  <label>
+    Duration: <input name="workout.duration" value="${flash['workout.duration']}">
+    <span class="error">#{error 'workout.duration' /}</span>
+  </label>
+  <br>
+  <input type="submit" value="Add Workout"/>
+</form>

@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'My Workouts' /}
+
+<h1>My Workouts</h1>
+<a href="@{Workouts.add}">Add Workout</a>
+<table>
+<tr>
+#{list items: workouts, as: 'workout'}
+  <td>${workout.date}</td>
+  <td>${workout.type}</td>
+  <td>${workout.duration}</td>
+</tr>
+#{/list}
+</table>
