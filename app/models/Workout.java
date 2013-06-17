@@ -1,5 +1,6 @@
 package models;
 
+import play.data.validation.Min;
 import play.data.validation.Required;
 import play.db.jpa.Model;
 import play.libs.Time;
@@ -9,11 +10,16 @@ import javax.validation.constraints.Past;
 import java.util.Date;
 
 @Entity
-public class Workout extends Model{
+public class Workout extends Model {
   @Required
-  public Date date;
+  public Date start;
+  @Required
+  public Date duration;
+  //public Date finish;
   @Required
   public Sport type;
-  @Required
-  public String duration;
+  @Min(0)
+  public int distance;
+  public Integer happy;
+  public Double speed;
 }
