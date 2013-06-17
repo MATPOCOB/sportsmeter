@@ -1,9 +1,9 @@
 package controllers;
 
 import models.Workout;
+import play.data.validation.Valid;
 import play.mvc.Controller;
 
-import javax.validation.Valid;
 import java.util.List;
 
 public class Workouts extends Controller {
@@ -18,7 +18,6 @@ public class Workouts extends Controller {
   }
 
   public static void save(@Valid Workout workout) {
-    //validation.valid(workout);
     if (validation.hasErrors()) {
       validation.keep();
       params.flash();
