@@ -2,19 +2,19 @@
 #{set title:'My Workouts' /}
 
 <h1>My Workouts</h1>
-<a href="@{Workouts.add}">Add Workout</a>
-
-<table class="table">
+<div><a href="@{Workouts.add}">Add Workout</a></div>
+<br>
+<table class="table table-hover">
   <tr>
-<th>Sport</th>
-<th>Date</th>
-<th>Duration</th>
-</tr>
-<tr>
-#{list items: workouts, as: 'workout'}
-  <td>${workout.type}</td>
-  <td>${workout.start.format()}</td>
-  <td>${workout.duration.formatDuration()}</td>
-</tr>
+    <th>&{'workout.type'}</th>
+    <th>&{'workout.start'}</th>
+    <th>&{'workout.duration'}</th>
+  </tr>
+  <tr>
+  #{list items: workouts, as: 'workout'}
+    <td>${workout.type}</td>
+    <td>${workout.start.format()}</td>
+    <td>${workout.duration.formatDuration()}</td>
+  </tr>
 #{/list}
 </table>

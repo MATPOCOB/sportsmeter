@@ -2,22 +2,24 @@
 #{set title:'Add Workout' /}
 
 <h1>Add Workout</h1>
-<form action="@{Workouts.save}" method="post">
-  <label>
-    Date:
+<br>
+<form action="@{Workouts.save}" class="form-horizontal" method="post">
+  #{formItem 'workout.type'}
+    #{select name: 'workout.type', items: models.Sport.values(), as: 'sport', labelProperty: 'sport.'+sport, value: flash['workout.type']}#{/select}
+  #{/formItem}
+
+  #{formItem 'workout.start'}
     <div class="input-append date datepicker" data-date="${new Date().format()}" data-date-format="dd.mm.yyyy">
-      <input id="id2" class="span2 " size="16" type="text" name="workout.start" value="${flash['workout.start'] ?: new Date().format()}">
+      <input class="input-small" type="text" name="workout.start" value="${flash['workout.start'] ?: new Date().format()}">
       <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
-    <span class="error">#{error 'workout.start' /}</span>
-  </label>
-  <label>
-    Type: <input name="workout.type" value="${flash['workout.type']}">
-    <span class="error">#{error 'workout.type' /}</span>
-  </label>
-  <label>
-    Duration: <input name="workout.duration" value="${flash['workout.duration']}">
-    <span class="error">#{error 'workout.duration' /}</span>
-  </label>
-  <input type="submit" class="btn" value="Add Workout"/>
+  #{/formItem}
+
+  #{formItem 'workout.duration'}
+    <input class="input-small" type="text" name="workout.duration" value="${flash['workout.duration']}">
+  #{/formItem}
+
+  #{formItem}
+    <button type="submit" class="btn">Add Workout</button>
+  #{/formItem}
 </form>

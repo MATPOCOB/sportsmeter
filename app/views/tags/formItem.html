@@ -1,0 +1,9 @@
+<div class="control-group">
+  %{field = _field ?: _arg}%
+  %{label = _label ?: field}%
+
+  #{if label}<label class="control-label">&{label}</label>#{/if}
+  <div class="controls">
+    #{doBody /}#{if field}<span class="error">#{error field/}</span>#{/if}
+  </div>
+</div>
