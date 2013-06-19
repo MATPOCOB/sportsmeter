@@ -7,6 +7,7 @@
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap.css'}">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-responsive.css'}">
+        #{stylesheet 'datepicker.css'/}
         <style>
           body {
             padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -14,8 +15,10 @@
         </style>
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{script 'jquery-1.10.1.js'/}
         #{script 'bootstrap.js'/}
+        #{script 'bootstrap-datepicker.js'/}
+        #{script 'main.js'/}
         #{get 'moreScripts' /}
     </head>
     <body>
