@@ -5,8 +5,8 @@
 <form action="@{Workouts.save}" method="post">
   <label>
     Date:
-    <div class="input-append date datepicker" data-date="${new Date().format(play.Play.configuration.getProperty('date.format'))}" data-date-format="${play.Play.configuration.getProperty('date.format').toLowerCase()}">
-      <input id="id2" class="span2 " size="16" type="text" name="workout.start" value="${flash['workout.start'] ?: new Date()}">
+    <div class="input-append date datepicker" data-date="${new Date().format()}" data-date-format="dd.mm.yyyy">
+      <input id="id2" class="span2 " size="16" type="text" name="workout.start" value="${flash['workout.start'] ?: new Date().format()}">
       <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
     <span class="error">#{error 'workout.start' /}</span>
