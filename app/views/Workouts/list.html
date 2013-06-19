@@ -3,12 +3,18 @@
 
 <h1>My Workouts</h1>
 <a href="@{Workouts.add}">Add Workout</a>
-<table>
+
+<table class="table">
+  <tr>
+<th>Sport</th>
+<th>Start</th>
+<th>Duration</th>
+</tr>
 <tr>
 #{list items: workouts, as: 'workout'}
-  <td>${workout.date}</td>
   <td>${workout.type}</td>
-  <td>${workout.duration}</td>
+  <td>${workout.start.format()}</td>
+  <td>${workout.duration.formatDuration()}</td>
 </tr>
 #{/list}
 </table>
