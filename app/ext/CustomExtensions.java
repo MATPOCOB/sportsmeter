@@ -10,11 +10,10 @@ import java.util.Date;
 public class CustomExtensions extends JavaExtensions {
 
   public static String formatTime(Date date) {
-    return new SimpleDateFormat(Config.TIME_FORMAT).format(date);
+    return new SimpleDateFormat(Config.DATE_FORMAT.split(" ")[0]).format(date);
   }
 
-  public static String formatDuration(Date date) {
-    //todo return the number of days
-    return formatTime(date);
+  public static String formatDate(Date date) {
+    return new SimpleDateFormat(Config.DATE_FORMAT.split(" ")[1]).format(date);
   }
 }

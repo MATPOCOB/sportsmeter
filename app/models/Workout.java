@@ -1,5 +1,6 @@
 package models;
 
+import play.data.binding.As;
 import play.data.validation.Min;
 import play.data.validation.Required;
 import play.db.jpa.Model;
@@ -13,7 +14,7 @@ import java.util.Date;
 public class Workout extends Model {
   @Required
   public Date start;
-  @Required
+  @As("HH:mm:ss")
   public Date duration;
   //public Date finish;
   @Required
