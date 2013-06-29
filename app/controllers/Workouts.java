@@ -26,5 +26,4 @@ public class Workouts extends Controller {
     workout.save();
     list();
   }
-
 }

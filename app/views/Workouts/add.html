@@ -21,11 +21,11 @@
   #{formItem 'workout.start'}
     <input type="hidden" name="workout.start">
     <div class="input-append date" data-date="${new Date().formatDate()}" data-date-format="dd.mm.yyyy">
-      <input class="input-small" type="text" name="workout.startDate" value="${(flash['workout.start'] ?: new Date()).formatDate()}">
+      <input class="input-small" type="text" name="workout.startDate" value="${flash['workout.start'] ?: new Date().formatDate()}">
       <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
     <div class="input-append bootstrap-timepicker">
-      <input name="workout.startTime" class="timepicker input-mini" type="text" data-show-meridian="false" data-show-seconds="true" data-second-step="1" data-minute-step="1" data-default-time="${(flash['workout.start'] ?: new Date()).formatTime()}">
+      <input name="workout.startTime" class="timepicker input-mini" type="text" data-show-meridian="false" data-show-seconds="true" data-second-step="1" data-minute-step="1" data-default-time="${flash['workout.start'] ?: new Date().formatTime()}">
       <span class="add-on"><i class="icon-time"></i></span>
     </div>
   #{/formItem}
@@ -35,6 +35,10 @@
       <input name="workout.duration" class="timepicker input-mini" type="text" data-show-meridian="false" data-show-seconds="true" data-second-step="1" data-minute-step="1" data-default-time="${flash['workout.duration'] ?: new Date(0).formatTimeUTC()}">
       <span class="add-on"><i class="icon-time"></i></span>
     </div>
+  #{/formItem}
+
+  #{formItem 'workout.distance'}
+    <input name="workout.distance" type="text" class="input-mini" placeholder="1.23" value="${flash['workout.distance']}"/> &{'km'}
   #{/formItem}
 
   #{formItem}

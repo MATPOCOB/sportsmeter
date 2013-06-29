@@ -3,3 +3,6 @@ ROLLER_SKATES=Roller Skates
 workout.start=Date
 workout.type=Type
 workout.duration=Duration
+workout.distance=Distance
+km=km
+
