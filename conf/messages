@@ -1,8 +1,10 @@
 ROLLER_SKATES=Roller Skates
 
-workout.start=Date
-workout.type=Type
-workout.duration=Duration
-workout.distance=Distance
+workout.start=When
+workout.type=What
+workout.duration=How Long
+workout.distance=How Far
+workout.speed=How Fast
 km=km
+kmh=km/h
 

@@ -10,13 +10,15 @@
     <th>&{'workout.start'}</th>
     <th>&{'workout.duration'}</th>
     <th>&{'workout.distance'} (&{'km'})</th>
+    <th>&{'workout.speed'} (&{'kmh'})</th>
   </tr>
   <tr>
   #{list items: workouts, as: 'workout'}
     <td>${workout.type}</td>
     <td>${workout.start.format()}</td>
-    <td>${workout.duration.formatTime()}</td>
+    <td>${workout.duration.formatTimeUTC()}</td>
     <td>${workout.distance.format("0.##")}</td>
+    <td>${workout.speed}</td>
   </tr>
 #{/list}
 </table>

@@ -6,6 +6,10 @@
     $('#workout-add').click(function() {
       var start = $('input[name="workout.startTime"]').val()+' '+$('input[name="workout.startDate"]').val();
       $('input[name="workout.start"]').val(start);
+
+      var duration = $('input[name="workout.duration"]');
+      duration.val(duration.val() + "+0000");
+
       $('#workout-form').submit();
     });
   });
@@ -20,12 +24,12 @@
 
   #{formItem 'workout.start'}
     <input type="hidden" name="workout.start">
-    <div class="input-append date" data-date="${new Date().formatDate()}" data-date-format="dd.mm.yyyy">
-      <input class="input-small" type="text" name="workout.startDate" value="${flash['workout.start'] ?: new Date().formatDate()}">
+    <div class="input-append date" data-date="${new Date().formatDate()}" data-date-format="${models.Config.DATE_FORMAT}">
+      <input class="input-small" type="text" name="workout.startDate" value="${flash['workout.startDate'] ?: new Date().formatDate()}">
       <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
     <div class="input-append bootstrap-timepicker">
-      <input name="workout.startTime" class="timepicker input-mini" type="text" data-show-meridian="false" data-show-seconds="true" data-second-step="1" data-minute-step="1" data-default-time="${flash['workout.start'] ?: new Date().formatTime()}">
+      <input name="workout.startTime" class="timepicker input-mini" type="text" data-show-meridian="false" data-show-seconds="true" data-second-step="1" data-minute-step="1" data-default-time="${flash['workout.startTime'] ?: new Date().formatTime()}">
       <span class="add-on"><i class="icon-time"></i></span>
     </div>
   #{/formItem}
