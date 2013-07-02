@@ -2,9 +2,10 @@ ROLLER_SKATES=Roller Skates
 
 workout.start=When
 workout.type=What
-workout.duration=How Long
-workout.distance=How Far
-workout.speed=How Fast
+workout.duration=How long
+workout.distance=How far
+workout.speed=How fast
+workout.happy=How happy
 km=km
 kmh=km/h
 

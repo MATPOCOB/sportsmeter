@@ -21,7 +21,7 @@ public class Workout extends Model {
   public Date duration;
   @Required
   public Sport type;
-  @Required @Min(0)
+  @Required @Min(0.001)
   public Double distance;
   public Integer happy;
 

@@ -11,6 +11,7 @@
     <th>&{'workout.duration'}</th>
     <th>&{'workout.distance'} (&{'km'})</th>
     <th>&{'workout.speed'} (&{'kmh'})</th>
+    <th>&{'workout.happy'}</th>
   </tr>
   <tr>
   #{list items: workouts, as: 'workout'}
@@ -18,7 +19,8 @@
     <td>${workout.start.format()}</td>
     <td>${workout.duration.formatTimeUTC()}</td>
     <td>${workout.distance.format("0.##")}</td>
-    <td>${workout.speed}</td>
+    <td>${workout.speed.format("0.#")}</td>
+    <td><i style="font-size:150%" class="${[1:'icon-frown', 5:'icon-meh', 9:'icon-smile'][workout.happy]} ${[1:'text-error', 5:'text-warning', 9:'text-success'][workout.happy]}"/></td>
   </tr>
 #{/list}
 </table>
