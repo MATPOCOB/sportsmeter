@@ -8,11 +8,11 @@ public class Config {
   public static String TIME_FORMAT = timeFormat(DATETIME_FORMAT);
 
   private static String dateFormat(String datetime) {
-    return datetime.split(" ")[1];
+    return datetime.split(" ")[0];
   }
 
   private static String timeFormat(String datetime) {
-    return datetime.split(" ")[0];
+    return datetime.split(" ")[1];
   }
 }
 
