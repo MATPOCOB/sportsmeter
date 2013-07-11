@@ -18,7 +18,7 @@
     });
 
     $('#workout-add').click(function() {
-      var start = $('input[name="workout.startTime"]').val()+' '+$('input[name="workout.startDate"]').val();
+      var start = $('input[name="workout.startDate"]').val()+' '+$('input[name="workout.startTime"]').val();
       $('input[name="workout.start"]').val(start);
 
       var duration = $('input[name="workout.duration"]');
