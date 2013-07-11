@@ -6,6 +6,7 @@
 <br>
 <table id="workouts-table" class="table table-hover">
   <tr>
+    <th></th>
     <th>&{'workout.type'}</th>
     <th>&{'workout.start'}</th>
     <th>&{'workout.duration'}</th>
@@ -15,6 +16,7 @@
   </tr>
   <tr>
   #{list items: workouts, as: 'workout'}
+    <td>${workout.id}</td>
     <td>${workout.type}</td>
     <td>${workout.start.format()}</td>
     <td>${workout.duration.formatTimeUTC()}</td>

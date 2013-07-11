@@ -9,7 +9,7 @@ import java.util.List;
 public class Workouts extends Controller {
 
   public static void list() {
-    List<Workout> workouts = Workout.all().fetch();
+    List<Workout> workouts = Workout.find("order by start desc").fetch();
     render(workouts);
   }
 
